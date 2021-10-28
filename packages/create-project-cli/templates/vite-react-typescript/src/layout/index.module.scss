@@ -1,0 +1,71 @@
+.trigger {
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 64px;
+  margin-left: 25px;
+  transition: color 0.3s;
+}
+
+.trigger:hover {
+  color: #1890ff;
+}
+
+.header {
+  align-items: center;
+  background: #fff !important;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.logo {
+  background: rgba(255 255 255 / 20%);
+  color: #fff;
+  font-size: 15px;
+  height: 32px;
+  line-height: 32px;
+  margin: 16px;
+  text-align: center;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  // margin-top: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.breadcrumb {
+  margin: 16px 0;
+}
+
+.site-layout {
+  margin-left: 250px;
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+  display: flex;
+}
+
+.sider {
+  height: 100vh;
+  overflow: auto;
+  position: fixed;
+  left: 0;
+  width: 250px !important;
+}
+
+:global {
+  .ant-layout-sider-dark {
+    min-width: 250px !important;
+  }
+
+  .ant-layout-sider-collapsed {
+    min-width: 80px !important;
+  }
+}

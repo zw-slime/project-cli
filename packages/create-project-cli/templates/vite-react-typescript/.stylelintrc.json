@@ -1,0 +1,12 @@
+{
+  "extends": ["stylelint-config-standard-scss","stylelint-config-sass-guidelines"],
+  "rules": {
+    "max-nesting-depth": null,
+    "string-quotes": "single",
+    "order/properties-alphabetical-order": null,
+    "selector-max-compound-selectors": null,
+    "selector-pseudo-class-no-unknown": [ true, {
+      "ignorePseudoClasses": ["host","global"]
+    } ]
+  }
+}
