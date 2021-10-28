@@ -1,5 +1,5 @@
 {
-  "name": "@zw/create-project",
+  "name": "@zhangwei-smile/create-project",
   "version": "1.0.0",
   "description": "A CLI to bootstrap my new projects",
   "main": "src/index.js",
@@ -11,7 +11,10 @@
     "access": "public"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "cz",
+    "prepare": "husky install",
+    "release": "standard-version"
   },
   "keywords": [
     "cli",
@@ -34,5 +37,19 @@
     "src/",
     "templates/"
   ],
-  "repository": "https://github.com/zw-slime/create-project-cli.git"
+  "repository": "https://github.com/zw-slime/create-project-cli.git",
+  "devDependencies": {
+    "@commitlint/cli": "^13.2.1",
+    "@commitlint/config-conventional": "^13.2.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "^8.1.0",
+    "husky": "^7.0.0",
+    "standard-version": "^9.3.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
