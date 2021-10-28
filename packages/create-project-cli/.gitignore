@@ -5,3 +5,5 @@ dist
 dist-ssr
 *.local
 build
+lib
+*/node_modules
