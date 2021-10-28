@@ -34,4 +34,5 @@
     "src/",
     "templates/"
   ],
+  "repository": "https://github.com/zw-slime/create-project-cli.git"
 }
