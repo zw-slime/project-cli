@@ -18,7 +18,7 @@
     "dev:comment": "启动开发环境",
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "build:comment": "构建",
-    "build": "rm -rf lib && tsc --build"
+    "build": "rm -rf lib && tsc --build && ncp templates lib/templates"
   },
   "keywords": [
     "cli",
