@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/zw-slime/create-project-cli/compare/v1.3.0...v1.4.0) (2021-11-04)
+
+
+### Features
+
+* 修改 check env 为 异步 ([df06a54](https://github.com/zw-slime/create-project-cli/commit/df06a54a57c96e7c82e9ba5c7c9024760f118426))
+* 修改 npm 配置 ([4b76905](https://github.com/zw-slime/create-project-cli/commit/4b76905e612c2f71f7e8089a3f8208963d863ffd))
+
 ## [1.3.0](https://github.com/zw-slime/create-project-cli/compare/v1.2.0...v1.3.0) (2021-11-04)
 
 
