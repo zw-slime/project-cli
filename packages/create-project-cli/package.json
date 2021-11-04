@@ -1,6 +1,6 @@
 {
   "name": "@zhangwei-smile/create-project",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "A CLI to bootstrap my new projects",
   "main": "build/src/index.js",
   "bin": {
@@ -15,10 +15,7 @@
     "commit": "cz",
     "prepare": "husky install",
     "release": "standard-version",
-    "dev:comment": "启动开发环境",
-    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
-    "build:comment": "构建",
-    "build": "tsc --build"
+    "build": "node build.js"
   },
   "keywords": [
     "cli",
@@ -61,12 +58,12 @@
     "@typescript-eslint/parser": "^5.2.0",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "3.3.0",
+    "esbuild": "^0.13.12",
     "eslint": "^8.1.0",
     "husky": "^7.0.0",
     "lint-staged": "^11.2.6",
     "prettier": "^2.4.1",
-    "standard-version": "^9.3.2",
-    "ts-node-dev": "^1.1.8"
+    "standard-version": "^9.3.2"
   },
   "config": {
     "commitizen": {

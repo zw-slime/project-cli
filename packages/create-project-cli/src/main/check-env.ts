@@ -1,8 +1,8 @@
 import chalk from 'chalk';
 import envinfo from 'envinfo';
 import https from 'https';
-import { execSync } from 'child_process';
 import semver from 'semver/preload';
+import execa from 'execa';
 
 import packageJson from '../../package.json';
 
@@ -26,9 +26,10 @@ export const checkEnv = async (info: boolean, useYarn: boolean) => {
   }
 
   // 检测CLI版本
-  const latest = await checkForLatestVersion().catch(() => {
+  const latest = await checkForLatestVersion().catch(async () => {
     try {
-      return execSync(`npm view ${packageJson.name} version`).toString().trim();
+      const result = await execa.commandSync(`npm view ${packageJson.name} version`);
+      return result.stdout.toString().trim();
     } catch (e) {
       return null;
     }
@@ -116,7 +117,7 @@ function checkNpmVersion() {
   let hasMinNpm = false;
   let npmVersion = null;
   try {
-    npmVersion = execSync('npm --version').toString().trim();
+    npmVersion = execa.commandSync('npm --version').stdout.toString().trim();
     hasMinNpm = semver.gte(npmVersion, '6.0.0');
   } catch (err) {
     // ignore
@@ -134,7 +135,7 @@ function checkYarnVersion() {
   let hasMaxYarnPnp = false;
   let yarnVersion = null;
   try {
-    yarnVersion = execSync('yarnpkg --version').toString().trim();
+    yarnVersion = execa.commandSync('yarnpkg --version').stdout.toString().trim();
     if (semver.valid(yarnVersion)) {
       hasMinYarnPnp = semver.gte(yarnVersion, minYarnPnp);
       hasMaxYarnPnp = semver.lt(yarnVersion, maxYarnPnp);
