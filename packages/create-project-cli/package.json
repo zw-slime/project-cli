@@ -1,8 +1,8 @@
 {
   "name": "@zhangwei-smile/create-project",
-  "version": "1.3.1",
+  "version": "1.3.11",
   "description": "A CLI to bootstrap my new projects",
-  "main": "src/index.ts",
+  "main": "build/src/index.js",
   "bin": {
     "zw/create-project": "bin/create-project.js",
     "create-project": "bin/create-project.js"
@@ -18,8 +18,7 @@
     "dev:comment": "启动开发环境",
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "build:comment": "构建",
-    "build": "rm -rf build && tsc --build",
-    "publish": "yarn build && npm publish ."
+    "build": "tsc --build"
   },
   "keywords": [
     "cli",
@@ -44,7 +43,8 @@
   },
   "files": [
     "bin/",
-    "build/"
+    "build/",
+    "CHANGELOG.md"
   ],
   "repository": "https://github.com/zw-slime/create-project-cli.git",
   "devDependencies": {

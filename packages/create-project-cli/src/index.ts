@@ -8,7 +8,7 @@ async function init() {
   await questions(args);
   await task();
 
-  console.log('%s Projects ready', chalk.green.bold('DONE'));
+  console.log('%s Projects ready.', chalk.green.bold('DONE'));
   process.exit(1);
 }
 
