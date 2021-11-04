@@ -26,20 +26,19 @@ export const checkEnv = async (info: boolean, useYarn: boolean) => {
   }
 
   // 检测CLI版本
-  checkForLatestVersion()
-    .catch(() => {
-      try {
-        return execSync(`npm view ${packageJson.name} version`).toString().trim();
-      } catch (e) {
-        return null;
-      }
-    })
-    .then((latest) => {
-      if (latest && semver.lt(packageJson.version, latest as string)) {
-        console.log();
-        console.error(
-          chalk.yellow(
-            `You are running  \`${packageJson.name}\` ${packageJson.version}, which is behind the latest release (${latest}).
+  const latest = await checkForLatestVersion().catch(() => {
+    try {
+      return execSync(`npm view ${packageJson.name} version`).toString().trim();
+    } catch (e) {
+      return null;
+    }
+  });
+
+  if (latest && semver.lt(packageJson.version, latest as string)) {
+    console.log();
+    console.error(
+      chalk.yellow(
+        `You are running  \`${packageJson.name}\` ${packageJson.version}, which is behind the latest release (${latest}).
             Please remove any global installs with one of the following commands：
             - npm uninstall -g ${packageJson.name}
             - yarn global remove ${packageJson.name}
@@ -47,11 +46,10 @@ export const checkEnv = async (info: boolean, useYarn: boolean) => {
             - npm install -g ${packageJson.name}
             - yarn global add ${packageJson.name}
             `,
-          ),
-        );
-        process.exit(1);
-      }
-    });
+      ),
+    );
+    process.exit(1);
+  }
 
   // 检查node 版本
   const unsupportedNodeVersion = !semver.satisfies(
