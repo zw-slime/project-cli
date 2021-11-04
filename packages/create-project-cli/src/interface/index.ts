@@ -1,8 +1,9 @@
 export interface Option {
-  skipPrompts: boolean;
-  git: boolean;
+  info: boolean;
   template: string;
   runInstall: boolean;
   targetDirectory: string;
   templateDirectory: string;
+  useYarn: boolean;
+  verbose: boolean;
 }

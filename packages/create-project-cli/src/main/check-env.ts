@@ -1,17 +1,17 @@
 import chalk from 'chalk';
-import packageJson from '../../package.json';
 import envinfo from 'envinfo';
 import https from 'https';
 import { execSync } from 'child_process';
 import semver from 'semver/preload';
-import { Command } from 'commander';
 
-export const checkEnv = async (args: Command) => {
-  if (args.getOptionValue('info')) {
+import packageJson from '../../package.json';
+
+export const checkEnv = async (info: boolean, useYarn: boolean) => {
+  if (info) {
     // envinfo 提供浏览器版本，Node.js版本，操作系统，编程语言等相关信息
-    console.log(chalk.bold('\n环境信息:'));
-    console.log(`\n  CLI版本 ${packageJson.name}: ${packageJson.version}`);
-    console.log(`  运行来源 ${__dirname}`);
+    console.log(chalk.bold('\nEnvironment Info:'));
+    console.log(`\n  current version of ${packageJson.name}: ${packageJson.version}`);
+    console.log(`  running from ${__dirname}`);
     const envinfoData = await envinfo.run(
       {
         System: ['OS', 'CPU'],
@@ -39,13 +39,12 @@ export const checkEnv = async (args: Command) => {
         console.log();
         console.error(
           chalk.yellow(
-            `您目前运行的CLI版本 \`${packageJson.name}\` ${packageJson.version}, 落后于最新版本 (${latest}).
-            请按照下面的提示，更新版本：
-            1. 删除旧版本
+            `You are running  \`${packageJson.name}\` ${packageJson.version}, which is behind the latest release (${latest}).
+            Please remove any global installs with one of the following commands：
             - npm uninstall -g ${packageJson.name}
             - yarn global remove ${packageJson.name}
-            2. 安装新版本
-             - npm install -g ${packageJson.name}
+            And install again with one of the following commands：
+            - npm install -g ${packageJson.name}
             - yarn global add ${packageJson.name}
             `,
           ),
@@ -63,17 +62,21 @@ export const checkEnv = async (args: Command) => {
 
   if (unsupportedNodeVersion) {
     console.log(
-      chalk.yellow(`您正在使用 Node ${process.version}，请更新至 Node 14 或者更高的版本`),
+      chalk.yellow(
+        `You are using Node ${process.version}，Please update to Node 14 or higher for a better.`,
+      ),
     );
   }
 
   // 检测npm 或者 yarn 版本
-  if (!args.getOptionValue('useYarn')) {
+  if (!useYarn) {
     const npmInfo = checkNpmVersion();
     if (!npmInfo.hasMinNpm) {
       if (npmInfo.npmVersion) {
         console.log(
-          chalk.yellow(`您正在使用 npm ${process.version}，请更新至 npm 6 或者更高的版本`),
+          chalk.yellow(
+            `You are using npm ${process.version}，Please update to npm 6 or higher for a better.`,
+          ),
         );
       }
     }
@@ -82,7 +85,9 @@ export const checkEnv = async (args: Command) => {
     if (yarnInfo.yarnVersion) {
       if (!yarnInfo.hasMinYarnPnp) {
         console.log(
-          chalk.yellow(`您正在使用 Yarn ${process.version}，请更新至 Yarn 1.12 或者更高的版本`),
+          chalk.yellow(
+            `You are using Yarn ${process.version}，Please update to Yarn 1.12 or higher for a better.`,
+          ),
         );
       }
     }

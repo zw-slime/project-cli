@@ -1,23 +1,23 @@
 import { Command } from 'commander';
+import chalk from 'chalk';
 
 import packageJson from '../../package.json';
-import chalk from 'chalk';
 
 export function arg() {
   const program = new Command(packageJson.name)
     .version(packageJson.version)
     .arguments('<project-directory>')
     .usage(`${chalk.green('<project-directory>')}[options]`)
-    .option('--info', '是否打印环境信息')
-    .option('--git', '是否初始化git', true)
-    .option('--use-yarn', '是否使用yarn', true)
-    .option('--template <path-to-template>', '选择具体的模版')
-    .option('-i --install', '是否npm/yarn install', true)
+    .option('--verbose', 'print additional logs')
+    .option('--info', 'print environment debug info')
+    .option('--use-yarn', 'is or not use yarn')
+    .option('--template <path-to-template>', 'specify a template for the created project')
+    .option('-i --install', 'is or not npm/yarn install')
     .allowUnknownOption()
     .on('--help', () => {
-      console.log(`${chalk.green('<project-directory>')} 必填项目文件夹名 默认为项目名`);
+      console.log(`${chalk.green('<project-directory>')} is required`);
       console.log();
-      console.log(`    自定义模版 ${chalk.cyan('--template')} 包括:`);
+      console.log(`    template ${chalk.cyan('--template')} :`);
       console.log(`      - vite+react+ts+antd: ${chalk.green('vite-react-typescript')}`);
     })
     .parse(process.argv);

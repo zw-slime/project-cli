@@ -1,12 +1,12 @@
-import { checkEnv } from './util/check-env';
-import { arg } from './util/arg';
-import { task } from './util/task';
 import chalk from 'chalk';
+
+import { checkEnv, arg, task, questions } from './main';
 
 async function init() {
   const args = arg();
-  await checkEnv(args);
-  await task(args);
+  await checkEnv(args.getOptionValue('info'), args.getOptionValue('useYarn'));
+  await questions(args);
+  await task();
 
   console.log('%s Projects ready', chalk.green.bold('DONE'));
   process.exit(1);
