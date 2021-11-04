@@ -18,7 +18,8 @@
     "dev:comment": "启动开发环境",
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "build:comment": "构建",
-    "build": "rm -rf build && tsc --build"
+    "build": "rm -rf build && tsc --build",
+    "publish": "yarn build && npm publish ."
   },
   "keywords": [
     "cli",
@@ -43,8 +44,7 @@
   },
   "files": [
     "bin/",
-    "src/",
-    "templates/"
+    "build/"
   ],
   "repository": "https://github.com/zw-slime/create-project-cli.git",
   "devDependencies": {
