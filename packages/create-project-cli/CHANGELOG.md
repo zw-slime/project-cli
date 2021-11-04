@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/zw-slime/create-project-cli/compare/v1.4.0...v1.5.0) (2021-11-04)
+
+
+### Features
+
+* 用esbuild ([b78ec50](https://github.com/zw-slime/create-project-cli/commit/b78ec50c8540766617b150c96f9c2dbf23225ffa))
+
 ## [1.4.0](https://github.com/zw-slime/create-project-cli/compare/v1.3.0...v1.4.0) (2021-11-04)
 
 
