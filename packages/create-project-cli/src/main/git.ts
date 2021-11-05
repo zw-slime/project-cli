@@ -1,5 +1,5 @@
 import execa from 'execa';
-import { deleteDirectory } from './deleteDirectory';
+import { deleteDirectory } from './delete-directory';
 import { optionService } from '../service';
 
 export async function initGit() {

@@ -3,7 +3,7 @@ import { Command } from 'commander';
 import chalk from 'chalk';
 
 import { defaultTemplate, templates } from '../config';
-import { optionService } from '../service';
+import { infoService, optionService } from '../service';
 
 export async function questions(args: Command): Promise<void> {
   const questions = [];
@@ -17,9 +17,7 @@ export async function questions(args: Command): Promise<void> {
       default: defaultTemplate,
     });
   } else {
-    console.log(
-      `${chalk.green('?')} Please choose which project template to use ? ${chalk.cyan(template)}`,
-    );
+    infoService.question('Please choose which project template to use', template);
   }
 
   const useYarn = args.getOptionValue('useYarn');
@@ -32,9 +30,7 @@ export async function questions(args: Command): Promise<void> {
       default: 'yarn',
     });
   } else {
-    console.log(
-      `${chalk.green('?')} Please choose npm or yarn ? ${chalk.cyan(useYarn ? 'yarn' : 'npm')}`,
-    );
+    infoService.question('Please choose npm or yarn', useYarn ? 'yarn' : 'npm');
   }
 
   const install = args.getOptionValue('install');
@@ -46,7 +42,7 @@ export async function questions(args: Command): Promise<void> {
       default: false,
     });
   } else {
-    console.log(`${chalk.green('?')} npm/yarn install ? ${chalk.cyan(install ? 'Y' : 'N')}`);
+    infoService.question('npm/yarn install', install ? 'Y' : 'N');
   }
 
   const answers = await inquirer.prompt(questions);

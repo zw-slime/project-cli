@@ -1,23 +1,29 @@
-import chalk from 'chalk';
-import packageJson from '../package.json';
-
 import { checkEnv, arg, task, questions } from './main';
+import {infoService} from "service";
 
 async function init() {
-  console.log(
-    `%s You are using ${packageJson.name}@${packageJson.version} now.`,
-    chalk.green.bold('START'),
-  );
+  infoService.start()
   const args = arg();
   await checkEnv(
     args.getOptionValue('info'),
     args.getOptionValue('useYarn'),
     args.getOptionValue('verbose'),
   );
+
+  process.on("exit",function(code){
+    //进行一些清理工作
+    infoService.exit()
+  });
+
+  process.on("exit",function(code){
+    //进行一些清理工作
+    infoService.exit()
+  });
+
   await questions(args);
   await task();
 
-  console.log('%s Projects ready.', chalk.green.bold('DONE'));
+  infoService.end()
   process.exit(1);
 }
 

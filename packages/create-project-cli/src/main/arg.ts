@@ -2,6 +2,9 @@ import { Command } from 'commander';
 import chalk from 'chalk';
 
 import packageJson from '../../package.json';
+import fs from 'fs-extra';
+import { infoService } from 'service';
+import { templates } from 'config';
 
 export function arg() {
   const program = new Command(packageJson.name)
@@ -21,6 +24,19 @@ export function arg() {
       console.log(`      - vite+react+ts+antd: ${chalk.green('vite-react-typescript')}`);
     })
     .parse(process.argv);
+
+  const template = program.getOptionValue('template');
+  const dir = program.args[0];
+
+  if (fs.existsSync(dir)) {
+    infoService.error(`Directory ${dir} is exist`);
+    process.exit(1);
+  }
+
+  if (template && !templates[template]) {
+    infoService.error(`Templates ${dir} is not exist`);
+    process.exit(1);
+  }
 
   return program;
 }

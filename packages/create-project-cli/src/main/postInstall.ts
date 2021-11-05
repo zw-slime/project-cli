@@ -1,5 +1,5 @@
 import path from 'path';
-import { deleteDirectory } from './deleteDirectory';
+import { deleteDirectory } from './delete-directory';
 import execa from 'execa';
 import { optionService } from '../service';
 

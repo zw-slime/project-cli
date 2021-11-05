@@ -4,7 +4,7 @@ import chalk from 'chalk';
 const download = require('download-git-repo');
 
 import { templates } from '../config';
-import { deleteDirectory } from './deleteDirectory';
+import { deleteDirectory } from './delete-directory';
 import { optionService } from '../service';
 
 export const downloadTemplate = async () => {

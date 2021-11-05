@@ -2,9 +2,9 @@ import fs from 'fs-extra';
 import path from 'path';
 import { optionService } from '../service';
 
-export const deleteDirectory = () => {
+export const deleteDirectory = (dir?: string) => {
   const option = optionService.getOption();
-  const root = path.resolve(option.targetDirectory);
+  const root = path.resolve(dir?dir:option.targetDirectory);
   if (fs.existsSync(root)) {
     fs.removeSync(root);
     if (option.verbose) {
