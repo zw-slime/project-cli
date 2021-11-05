@@ -6,7 +6,7 @@ import execa from 'execa';
 
 import packageJson from '../../package.json';
 
-export const checkEnv = async (info: boolean, useYarn: boolean) => {
+export const checkEnv = async (info: boolean, useYarn: boolean, verbose: boolean) => {
   if (info) {
     // envinfo 提供浏览器版本，Node.js版本，操作系统，编程语言等相关信息
     console.log(chalk.bold('\nEnvironment Info:'));
@@ -34,6 +34,11 @@ export const checkEnv = async (info: boolean, useYarn: boolean) => {
       return null;
     }
   });
+
+  if (verbose) {
+    console.log('latest:', latest);
+    console.log('cureent version:', packageJson.version);
+  }
 
   if (latest && semver.lt(packageJson.version, latest as string)) {
     console.log();
