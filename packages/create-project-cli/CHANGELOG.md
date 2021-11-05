@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/zw-slime/create-project-cli/compare/v1.5.0...v1.6.0) (2021-11-05)
+
+
+### Features
+
+* 添加version提示 ([bc7da9c](https://github.com/zw-slime/create-project-cli/commit/bc7da9cbca324dd91cc8b604cd58c34bc050b3e2))
+
 ## [1.5.0](https://github.com/zw-slime/create-project-cli/compare/v1.4.0...v1.5.0) (2021-11-04)
 
 
