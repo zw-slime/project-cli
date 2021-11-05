@@ -5,14 +5,14 @@ class InfoService {
   start() {
     console.log(
       `%s You are using ${packageJson.name}@${packageJson.version} now...`,
-      chalk.green.bold('START'),
+      chalk.yellowBright.bold('START'),
     );
   }
 
   exit() {
     console.log(
       `%s ${packageJson.name}@${packageJson.version} is exiting...`,
-      chalk.green.bold('EXIT'),
+      chalk.blueBright.bold('EXIT'),
     );
   }
 

@@ -29,12 +29,12 @@ export function arg() {
   const dir = program.args[0];
 
   if (fs.existsSync(dir)) {
-    infoService.error(`Directory ${dir} is exist`);
+    infoService.error(`Directory ${dir} is existed`);
     process.exit(1);
   }
 
   if (template && !templates[template]) {
-    infoService.error(`Templates ${dir} is not exist`);
+    infoService.error(`Templates ${dir} is not existed`);
     process.exit(1);
   }
 
