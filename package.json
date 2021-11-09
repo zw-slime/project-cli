@@ -30,5 +30,8 @@
   "lint-staged": {
     "*.{js,ts}": "eslint --cache --fix",
     "*.{js,ts,md}": "prettier --write"
+  },
+  "dependencies": {
+    "typescript": "^4.4.4"
   }
 }
