@@ -24,7 +24,7 @@ process.on('exit', function (code) {
 
 process.on('uncaughtException', function (err) {
   //进行一些清理工作
-  infoService.error(`err:${err.message}`);
+  infoService.error(`err: ${err.message}`);
 });
 
 process.on('SIGINT', function () {

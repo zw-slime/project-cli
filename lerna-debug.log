@@ -1,20 +1,10 @@
-0 silly argv {
-0 silly argv   _: [ 'import' ],
-0 silly argv   lernaVersion: '4.0.0',
-0 silly argv   '$0': 'lerna',
-0 silly argv   dir: '../create-project-cli'
-0 silly argv }
+0 silly argv { _: [ 'diff' ], lernaVersion: '4.0.0', '$0': 'lerna' }
 1 notice cli v4.0.0
 2 verbose rootPath /Users/zhangwei/projects/learn/project-cli
-3 error Error: Command failed with exit code 128: git rev-parse HEAD
-3 error fatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.
-3 error Use '--' to separate paths from revisions, like this:
-3 error 'git <command> [<revision>...] -- [<file>...]'
-3 error HEAD
-3 error     at makeError (/Users/zhangwei/.config/yarn/global/node_modules/@lerna/child-process/node_modules/execa/lib/error.js:60:11)
-3 error     at Function.module.exports.sync (/Users/zhangwei/.config/yarn/global/node_modules/@lerna/child-process/node_modules/execa/index.js:194:17)
-3 error     at Object.execSync (/Users/zhangwei/.config/yarn/global/node_modules/@lerna/child-process/index.js:39:16)
-3 error     at ImportCommand.execSync (/Users/zhangwei/.config/yarn/global/node_modules/@lerna/import/index.js:141:25)
-3 error     at ImportCommand.getCurrentSHA (/Users/zhangwei/.config/yarn/global/node_modules/@lerna/import/index.js:133:17)
-3 error     at ImportCommand.initialize (/Users/zhangwei/.config/yarn/global/node_modules/@lerna/import/index.js:102:31)
-3 error     at /Users/zhangwei/.config/yarn/global/node_modules/@lerna/command/index.js:274:24
+3 error TypeError: cfg.indexOf is not a function
+3 error     at /Users/zhangwei/.config/yarn/global/node_modules/@lerna/project/lib/make-file-finder.js:26:40
+3 error     at Array.some (<anonymous>)
+3 error     at getGlobOpts (/Users/zhangwei/.config/yarn/global/node_modules/@lerna/project/lib/make-file-finder.js:26:22)
+3 error     at makeFileFinder (/Users/zhangwei/.config/yarn/global/node_modules/@lerna/project/lib/make-file-finder.js:45:20)
+3 error     at Project.get fileFinder [as fileFinder] (/Users/zhangwei/.config/yarn/global/node_modules/@lerna/project/index.js:191:20)
+3 error     at Project.getPackages (/Users/zhangwei/.config/yarn/global/node_modules/@lerna/project/index.js:210:17)
