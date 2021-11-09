@@ -1,5 +1,5 @@
 import { checkEnv, arg, task, questions } from './main';
-import { infoService } from 'service';
+import { infoService } from './service';
 
 async function init() {
   infoService.start();

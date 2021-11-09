@@ -3,8 +3,8 @@ import chalk from 'chalk';
 
 import packageJson from '../../package.json';
 import fs from 'fs-extra';
-import { infoService } from 'service';
-import { templates } from 'config';
+import { infoService } from '../service';
+import { templates } from '../config';
 
 export function arg() {
   const program = new Command(packageJson.name)
