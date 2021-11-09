@@ -5,3 +5,5 @@ dist
 dist-ssr
 *.local
 build
+.npmrc
+lerna-debug.log
