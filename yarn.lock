@@ -23,21 +23,6 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@commitlint/cli@^13.2.1":
-  version "13.2.1"
-  resolved "https://registry.npmmirror.com/@commitlint/cli/download/@commitlint/cli-13.2.1.tgz?cache=0&sync_timestamp=1635774246257&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40commitlint%2Fcli%2Fdownload%2F%40commitlint%2Fcli-13.2.1.tgz#80ebd46beef6ceed3bb0c0842bcda8d02a3c91de"
-  integrity sha1-gOvUa+72zu07sMCEK82o0Co8kd4=
-  dependencies:
-    "@commitlint/format" "^13.2.0"
-    "@commitlint/lint" "^13.2.0"
-    "@commitlint/load" "^13.2.1"
-    "@commitlint/read" "^13.2.0"
-    "@commitlint/types" "^13.2.0"
-    lodash "^4.17.19"
-    resolve-from "5.0.0"
-    resolve-global "1.0.0"
-    yargs "^17.0.0"
-
 "@commitlint/cli@^14.1.0":
   version "14.1.0"
   resolved "https://registry.npmmirror.com/@commitlint/cli/download/@commitlint/cli-14.1.0.tgz?cache=0&sync_timestamp=1635774246257&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40commitlint%2Fcli%2Fdownload%2F%40commitlint%2Fcli-14.1.0.tgz#7b657a955ed22f3df348ba9afa6ce5a5121ff7eb"
@@ -53,27 +38,12 @@
     resolve-global "1.0.0"
     yargs "^17.0.0"
 
-"@commitlint/config-conventional@^13.2.0":
-  version "13.2.0"
-  resolved "https://registry.npmmirror.com/@commitlint/config-conventional/download/@commitlint/config-conventional-13.2.0.tgz#2ad24fecc56ae9619dbe0934b98a98b18ace0bec"
-  integrity sha1-KtJP7MVq6WGdvgk0uYqYsYrOC+w=
-  dependencies:
-    conventional-changelog-conventionalcommits "^4.3.1"
-
 "@commitlint/config-conventional@^14.1.0":
   version "14.1.0"
   resolved "https://registry.npmmirror.com/@commitlint/config-conventional/download/@commitlint/config-conventional-14.1.0.tgz#29e386ef200fa72d43418153ab1c490c89024dee"
   integrity sha1-KeOG7yAPpy1DQYFTqxxJDIkCTe4=
   dependencies:
     conventional-changelog-conventionalcommits "^4.3.1"
-
-"@commitlint/ensure@^13.2.0":
-  version "13.2.0"
-  resolved "https://registry.npmmirror.com/@commitlint/ensure/download/@commitlint/ensure-13.2.0.tgz#990c24f753781d1f14c1647c52d34a5730892e3d"
-  integrity sha1-mQwk91N4HR8UwWR8UtNKVzCJLj0=
-  dependencies:
-    "@commitlint/types" "^13.2.0"
-    lodash "^4.17.19"
 
 "@commitlint/ensure@^14.1.0":
   version "14.1.0"
@@ -83,23 +53,10 @@
     "@commitlint/types" "^14.0.0"
     lodash "^4.17.19"
 
-"@commitlint/execute-rule@^13.2.0":
-  version "13.2.0"
-  resolved "https://registry.npmmirror.com/@commitlint/execute-rule/download/@commitlint/execute-rule-13.2.0.tgz#e112159d6647bc5afe2f77c2080ef0f615fd541f"
-  integrity sha1-4RIVnWZHvFr+L3fCCA7w9hX9VB8=
-
 "@commitlint/execute-rule@^14.0.0":
   version "14.0.0"
   resolved "https://registry.npmmirror.com/@commitlint/execute-rule/download/@commitlint/execute-rule-14.0.0.tgz#3ba45fc255286e3180f89ed4e9ac1ef237160734"
   integrity sha1-O6RfwlUobjGA+J7U6awe8jcWBzQ=
-
-"@commitlint/format@^13.2.0":
-  version "13.2.0"
-  resolved "https://registry.npmmirror.com/@commitlint/format/download/@commitlint/format-13.2.0.tgz#eccfff0a09ced8533afb21b2b3a1e28176b109d5"
-  integrity sha1-7M//CgnO2FM6+yGys6HigXaxCdU=
-  dependencies:
-    "@commitlint/types" "^13.2.0"
-    chalk "^4.0.0"
 
 "@commitlint/format@^14.1.0":
   version "14.1.0"
@@ -109,14 +66,6 @@
     "@commitlint/types" "^14.0.0"
     chalk "^4.0.0"
 
-"@commitlint/is-ignored@^13.2.0":
-  version "13.2.0"
-  resolved "https://registry.npmmirror.com/@commitlint/is-ignored/download/@commitlint/is-ignored-13.2.0.tgz#532ddfb5d62a489ff4d3ad88bcbee44e8c7d2c8f"
-  integrity sha1-Uy3ftdYqSJ/0062IvL7kTox9LI8=
-  dependencies:
-    "@commitlint/types" "^13.2.0"
-    semver "7.3.5"
-
 "@commitlint/is-ignored@^14.0.0":
   version "14.0.0"
   resolved "https://registry.npmmirror.com/@commitlint/is-ignored/download/@commitlint/is-ignored-14.0.0.tgz#8c88e05211519bc187558aad07eee02581292ec4"
@@ -124,16 +73,6 @@
   dependencies:
     "@commitlint/types" "^14.0.0"
     semver "7.3.5"
-
-"@commitlint/lint@^13.2.0":
-  version "13.2.0"
-  resolved "https://registry.npmmirror.com/@commitlint/lint/download/@commitlint/lint-13.2.0.tgz?cache=0&sync_timestamp=1635774247066&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40commitlint%2Flint%2Fdownload%2F%40commitlint%2Flint-13.2.0.tgz#b568c96bd21c8fa8eec359a5e21d22743206761f"
-  integrity sha1-tWjJa9Icj6juw1ml4h0idDIGdh8=
-  dependencies:
-    "@commitlint/is-ignored" "^13.2.0"
-    "@commitlint/parse" "^13.2.0"
-    "@commitlint/rules" "^13.2.0"
-    "@commitlint/types" "^13.2.0"
 
 "@commitlint/lint@^14.1.0":
   version "14.1.0"
@@ -160,39 +99,10 @@
     resolve-from "^5.0.0"
     typescript "^4.4.3"
 
-"@commitlint/load@^13.2.1":
-  version "13.2.1"
-  resolved "https://registry.npmmirror.com/@commitlint/load/download/@commitlint/load-13.2.1.tgz?cache=0&sync_timestamp=1635774247349&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40commitlint%2Fload%2Fdownload%2F%40commitlint%2Fload-13.2.1.tgz#d5d926dbd05021c02837c438ff1057025b28b745"
-  integrity sha1-1dkm29BQIcAoN8Q4/xBXAlsot0U=
-  dependencies:
-    "@commitlint/execute-rule" "^13.2.0"
-    "@commitlint/resolve-extends" "^13.2.0"
-    "@commitlint/types" "^13.2.0"
-    "@endemolshinegroup/cosmiconfig-typescript-loader" "^3.0.2"
-    chalk "^4.0.0"
-    cosmiconfig "^7.0.0"
-    lodash "^4.17.19"
-    resolve-from "^5.0.0"
-    typescript "^4.4.3"
-
-"@commitlint/message@^13.2.0":
-  version "13.2.0"
-  resolved "https://registry.npmmirror.com/@commitlint/message/download/@commitlint/message-13.2.0.tgz#1a60f578551750a8d6b533be8a40541fc2e928a8"
-  integrity sha1-GmD1eFUXUKjWtTO+ikBUH8LpKKg=
-
 "@commitlint/message@^14.0.0":
   version "14.0.0"
   resolved "https://registry.npmmirror.com/@commitlint/message/download/@commitlint/message-14.0.0.tgz#4db852fcd76352be547811d57709667588a39ba9"
   integrity sha1-TbhS/NdjUr5UeBHVdwlmdYijm6k=
-
-"@commitlint/parse@^13.2.0":
-  version "13.2.0"
-  resolved "https://registry.npmmirror.com/@commitlint/parse/download/@commitlint/parse-13.2.0.tgz#48054602bd73dccbffee4f9ba8b2549c857ba0b7"
-  integrity sha1-SAVGAr1z3Mv/7k+bqLJUnIV7oLc=
-  dependencies:
-    "@commitlint/types" "^13.2.0"
-    conventional-changelog-angular "^5.0.11"
-    conventional-commits-parser "^3.2.2"
 
 "@commitlint/parse@^14.0.0":
   version "14.0.0"
@@ -202,16 +112,6 @@
     "@commitlint/types" "^14.0.0"
     conventional-changelog-angular "^5.0.11"
     conventional-commits-parser "^3.2.2"
-
-"@commitlint/read@^13.2.0":
-  version "13.2.0"
-  resolved "https://registry.npmmirror.com/@commitlint/read/download/@commitlint/read-13.2.0.tgz?cache=0&sync_timestamp=1635774199466&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40commitlint%2Fread%2Fdownload%2F%40commitlint%2Fread-13.2.0.tgz#2af580322ec6297478aba84fa8ec24fd27c35a54"
-  integrity sha1-KvWAMi7GKXR4q6hPqOwk/SfDWlQ=
-  dependencies:
-    "@commitlint/top-level" "^13.2.0"
-    "@commitlint/types" "^13.2.0"
-    fs-extra "^10.0.0"
-    git-raw-commits "^2.0.0"
 
 "@commitlint/read@^14.0.0":
   version "14.0.0"
@@ -223,16 +123,6 @@
     fs-extra "^10.0.0"
     git-raw-commits "^2.0.0"
 
-"@commitlint/resolve-extends@^13.2.0":
-  version "13.2.0"
-  resolved "https://registry.npmmirror.com/@commitlint/resolve-extends/download/@commitlint/resolve-extends-13.2.0.tgz#74f48512eb1785abe07336a5208225fdf7fec327"
-  integrity sha1-dPSFEusXhavgczalIIIl/ff+wyc=
-  dependencies:
-    import-fresh "^3.0.0"
-    lodash "^4.17.19"
-    resolve-from "^5.0.0"
-    resolve-global "^1.0.0"
-
 "@commitlint/resolve-extends@^14.1.0":
   version "14.1.0"
   resolved "https://registry.npmmirror.com/@commitlint/resolve-extends/download/@commitlint/resolve-extends-14.1.0.tgz#f23b40d95c95901fcb7b53edebc8fe86f54fe99d"
@@ -242,17 +132,6 @@
     lodash "^4.17.19"
     resolve-from "^5.0.0"
     resolve-global "^1.0.0"
-
-"@commitlint/rules@^13.2.0":
-  version "13.2.0"
-  resolved "https://registry.npmmirror.com/@commitlint/rules/download/@commitlint/rules-13.2.0.tgz#e272fbd4099c2fe98bca1277d7f8caa3578b8f43"
-  integrity sha1-4nL71AmcL+mLyhJ31/jKo1eLj0M=
-  dependencies:
-    "@commitlint/ensure" "^13.2.0"
-    "@commitlint/message" "^13.2.0"
-    "@commitlint/to-lines" "^13.2.0"
-    "@commitlint/types" "^13.2.0"
-    execa "^5.0.0"
 
 "@commitlint/rules@^14.1.0":
   version "14.1.0"
@@ -265,22 +144,10 @@
     "@commitlint/types" "^14.0.0"
     execa "^5.0.0"
 
-"@commitlint/to-lines@^13.2.0":
-  version "13.2.0"
-  resolved "https://registry.npmmirror.com/@commitlint/to-lines/download/@commitlint/to-lines-13.2.0.tgz#e65d16340f353b496e90609b452f23f4b0be0b6a"
-  integrity sha1-5l0WNA81O0lukGCbRS8j9LC+C2o=
-
 "@commitlint/to-lines@^14.0.0":
   version "14.0.0"
   resolved "https://registry.npmmirror.com/@commitlint/to-lines/download/@commitlint/to-lines-14.0.0.tgz#d90c7453bc678e7e2d8a4cae125783b1d4df7aa4"
   integrity sha1-2Qx0U7xnjn4tikyuEleDsdTfeqQ=
-
-"@commitlint/top-level@^13.2.0":
-  version "13.2.0"
-  resolved "https://registry.npmmirror.com/@commitlint/top-level/download/@commitlint/top-level-13.2.0.tgz?cache=0&sync_timestamp=1635893775473&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40commitlint%2Ftop-level%2Fdownload%2F%40commitlint%2Ftop-level-13.2.0.tgz#869814e8ac0fec6a6e1f2e9665a318e4dc979e1e"
-  integrity sha1-hpgU6KwP7GpuHy6WZaMY5NyXnh4=
-  dependencies:
-    find-up "^5.0.0"
 
 "@commitlint/top-level@^14.0.0":
   version "14.0.0"
@@ -288,13 +155,6 @@
   integrity sha1-X+1qx64vXP8C6h9Bvdv6JEh+88g=
   dependencies:
     find-up "^5.0.0"
-
-"@commitlint/types@^13.2.0":
-  version "13.2.0"
-  resolved "https://registry.npmmirror.com/@commitlint/types/download/@commitlint/types-13.2.0.tgz?cache=0&sync_timestamp=1635774336431&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40commitlint%2Ftypes%2Fdownload%2F%40commitlint%2Ftypes-13.2.0.tgz#ed8128f9e41383f8f0ee1b0370c724826821e581"
-  integrity sha1-7YEo+eQTg/jw7hsDcMckgmgh5YE=
-  dependencies:
-    chalk "^4.0.0"
 
 "@commitlint/types@^14.0.0":
   version "14.0.0"
@@ -1353,7 +1213,7 @@
   dependencies:
     "@types/node" "*"
 
-"@typescript-eslint/eslint-plugin@^5.2.0", "@typescript-eslint/eslint-plugin@^5.3.1":
+"@typescript-eslint/eslint-plugin@^5.3.1":
   version "5.3.1"
   resolved "https://registry.npmmirror.com/@typescript-eslint/eslint-plugin/download/@typescript-eslint/eslint-plugin-5.3.1.tgz?cache=0&sync_timestamp=1636396542122&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40typescript-eslint%2Feslint-plugin%2Fdownload%2F%40typescript-eslint%2Feslint-plugin-5.3.1.tgz#d8ff412f10f54f6364e7fd7c1e70eb6767f434c3"
   integrity sha512-cFImaoIr5Ojj358xI/SDhjog57OK2NqlpxwdcgyxDA3bJlZcJq5CPzUXtpD7CxI2Hm6ATU7w5fQnnkVnmwpHqw==
@@ -1379,7 +1239,7 @@
     eslint-scope "^5.1.1"
     eslint-utils "^3.0.0"
 
-"@typescript-eslint/parser@^5.2.0", "@typescript-eslint/parser@^5.3.1":
+"@typescript-eslint/parser@^5.3.1":
   version "5.3.1"
   resolved "https://registry.npmmirror.com/@typescript-eslint/parser/download/@typescript-eslint/parser-5.3.1.tgz?cache=0&sync_timestamp=1636396541217&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40typescript-eslint%2Fparser%2Fdownload%2F%40typescript-eslint%2Fparser-5.3.1.tgz#8ff1977c3d3200c217b3e4628d43ef92f89e5261"
   integrity sha512-TD+ONlx5c+Qhk21x9gsJAMRohWAUMavSOmJgv3JGy9dgPhuBd5Wok0lmMClZDyJNLLZK1JRKiATzCKZNUmoyfw==
@@ -2147,12 +2007,7 @@ conventional-changelog-codemirror@^2.0.8:
   dependencies:
     q "^1.5.1"
 
-conventional-changelog-config-spec@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.nlark.com/conventional-changelog-config-spec/download/conventional-changelog-config-spec-2.1.0.tgz#874a635287ef8b581fd8558532bf655d4fb59f2d"
-  integrity sha1-h0pjUofvi1gf2FWFMr9lXU+1ny0=
-
-conventional-changelog-conventionalcommits@4.6.1, conventional-changelog-conventionalcommits@^4.3.1, conventional-changelog-conventionalcommits@^4.5.0:
+conventional-changelog-conventionalcommits@^4.3.1, conventional-changelog-conventionalcommits@^4.5.0:
   version "4.6.1"
   resolved "https://registry.nlark.com/conventional-changelog-conventionalcommits/download/conventional-changelog-conventionalcommits-4.6.1.tgz?cache=0&sync_timestamp=1631215162490&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fconventional-changelog-conventionalcommits%2Fdownload%2Fconventional-changelog-conventionalcommits-4.6.1.tgz#f4c0921937050674e578dc7875f908351ccf4014"
   integrity sha1-9MCSGTcFBnTleNx4dfkINRzPQBQ=
@@ -2237,7 +2092,7 @@ conventional-changelog-writer@^5.0.0:
     split "^1.0.0"
     through2 "^4.0.0"
 
-conventional-changelog@3.1.24, conventional-changelog@^3.1.24:
+conventional-changelog@^3.1.24:
   version "3.1.24"
   resolved "https://registry.npm.taobao.org/conventional-changelog/download/conventional-changelog-3.1.24.tgz#ebd180b0fd1b2e1f0095c4b04fd088698348a464"
   integrity sha1-69GAsP0bLh8AlcSwT9CIaYNIpGQ=
@@ -2279,7 +2134,7 @@ conventional-commits-parser@^3.2.0, conventional-commits-parser@^3.2.2:
     split2 "^3.0.0"
     through2 "^4.0.0"
 
-conventional-recommended-bump@6.1.0, conventional-recommended-bump@^6.1.0:
+conventional-recommended-bump@^6.1.0:
   version "6.1.0"
   resolved "https://registry.nlark.com/conventional-recommended-bump/download/conventional-recommended-bump-6.1.0.tgz#cfa623285d1de554012f2ffde70d9c8a22231f55"
   integrity sha1-z6YjKF0d5VQBLy/95w2ciiIjH1U=
@@ -2543,11 +2398,6 @@ detect-indent@^6.0.0:
   resolved "https://registry.nlark.com/detect-indent/download/detect-indent-6.1.0.tgz?cache=0&sync_timestamp=1628462018641&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fdetect-indent%2Fdownload%2Fdetect-indent-6.1.0.tgz#592485ebbbf6b3b1ab2be175c8393d04ca0d57e6"
   integrity sha1-WSSF67v2s7GrK+F1yDk9BMoNV+Y=
 
-detect-newline@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.npmmirror.com/detect-newline/download/detect-newline-3.1.0.tgz#576f5dfc63ae1a192ff192d8ad3af6308991b651"
-  integrity sha1-V29d/GOuGhkv8ZLYrTr2MImRtlE=
-
 dezalgo@^1.0.0:
   version "1.0.3"
   resolved "https://registry.npm.taobao.org/dezalgo/download/dezalgo-1.0.3.tgz#7f742de066fc748bc8db820569dddce49bf0d456"
@@ -2588,14 +2438,6 @@ dot-prop@^6.0.1:
   integrity sha1-/CazzxQrnlm3Tb057WbOYgxoEIM=
   dependencies:
     is-obj "^2.0.0"
-
-dotgitignore@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.npm.taobao.org/dotgitignore/download/dotgitignore-2.1.0.tgz#a4b15a4e4ef3cf383598aaf1dfa4a04bcc089b7b"
-  integrity sha1-pLFaTk7zzzg1mKrx36SgS8wIm3s=
-  dependencies:
-    find-up "^3.0.0"
-    minimatch "^3.0.4"
 
 download-git-repo@^3.0.2:
   version "3.0.2"
@@ -3102,7 +2944,7 @@ figures@^2.0.0:
   dependencies:
     escape-string-regexp "^1.0.5"
 
-figures@^3.0.0, figures@^3.1.0:
+figures@^3.0.0:
   version "3.2.0"
   resolved "https://registry.nlark.com/figures/download/figures-3.2.0.tgz?cache=0&sync_timestamp=1625254307578&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ffigures%2Fdownload%2Ffigures-3.2.0.tgz#625c18bd293c604dc4a8ddb2febf0c88341746af"
   integrity sha1-YlwYvSk8YE3EqN2y/r8MiDQXRq8=
@@ -3187,13 +3029,6 @@ find-up@^2.0.0:
   dependencies:
     locate-path "^2.0.0"
 
-find-up@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.npmmirror.com/find-up/download/find-up-3.0.0.tgz#49169f1d7993430646da61ecc5ae355c21c97b73"
-  integrity sha1-SRafHXmTQwZG2mHsxa41XCHJe3M=
-  dependencies:
-    locate-path "^3.0.0"
-
 find-up@^4.0.0, find-up@^4.1.0:
   version "4.1.0"
   resolved "https://registry.npmmirror.com/find-up/download/find-up-4.1.0.tgz#97afe7d6cdc0bc5928584b7c8d7b16e8a9aa5d19"
@@ -3254,13 +3089,6 @@ from2@^2.1.1:
   dependencies:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
-
-fs-access@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npm.taobao.org/fs-access/download/fs-access-1.0.1.tgz#d6a87f262271cefebec30c553407fb995da8777a"
-  integrity sha1-1qh/JiJxzv6+wwxVNAf7mV2od3o=
-  dependencies:
-    null-check "^1.0.0"
 
 fs-constants@^1.0.0:
   version "1.0.0"
@@ -3443,7 +3271,7 @@ git-remote-origin-url@^2.0.0:
     gitconfiglocal "^1.0.0"
     pify "^2.3.0"
 
-git-semver-tags@^4.0.0, git-semver-tags@^4.1.1:
+git-semver-tags@^4.1.1:
   version "4.1.1"
   resolved "https://registry.npm.taobao.org/git-semver-tags/download/git-semver-tags-4.1.1.tgz#63191bcd809b0ec3e151ba4751c16c444e5b5780"
   integrity sha1-YxkbzYCbDsPhUbpHUcFsRE5bV4A=
@@ -4353,7 +4181,7 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.npm.taobao.org/lines-and-columns/download/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
-lint-staged@>=10, lint-staged@^11.2.6:
+lint-staged@>=10:
   version "11.2.6"
   resolved "https://registry.npmmirror.com/lint-staged/download/lint-staged-11.2.6.tgz#f477b1af0294db054e5937f171679df63baa4c43"
   integrity sha1-9HexrwKU2wVOWTfxcWed9juqTEM=
@@ -4457,14 +4285,6 @@ locate-path@^2.0.0:
   integrity sha1-K1aLJl7slExtnA3pw9u7ygNUzY4=
   dependencies:
     p-locate "^2.0.0"
-    path-exists "^3.0.0"
-
-locate-path@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.nlark.com/locate-path/download/locate-path-3.0.0.tgz#dbec3b3ab759758071b58fe59fc41871af21400e"
-  integrity sha1-2+w7OrdZdYBxtY/ln8QYca8hQA4=
-  dependencies:
-    p-locate "^3.0.0"
     path-exists "^3.0.0"
 
 locate-path@^5.0.0:
@@ -5123,11 +4943,6 @@ npmlog@^4.1.2:
     gauge "~2.7.3"
     set-blocking "~2.0.0"
 
-null-check@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.nlark.com/null-check/download/null-check-1.0.0.tgz#977dffd7176012b9ec30d2a39db5cf72a0439edd"
-  integrity sha1-l33/1xdgErnsMNKjnbXPcqBDnt0=
-
 number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmmirror.com/number-is-nan/download/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
@@ -5267,7 +5082,7 @@ p-limit@^1.1.0:
   dependencies:
     p-try "^1.0.0"
 
-p-limit@^2.0.0, p-limit@^2.2.0:
+p-limit@^2.2.0:
   version "2.3.0"
   resolved "https://registry.nlark.com/p-limit/download/p-limit-2.3.0.tgz?cache=0&sync_timestamp=1628812721654&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fp-limit%2Fdownload%2Fp-limit-2.3.0.tgz#3dd33c647a214fdfffd835933eb086da0dc21db1"
   integrity sha1-PdM8ZHohT9//2DWTPrCG2g3CHbE=
@@ -5287,13 +5102,6 @@ p-locate@^2.0.0:
   integrity sha1-IKAQOyIqcMj9OcwuWAaA893l7EM=
   dependencies:
     p-limit "^1.1.0"
-
-p-locate@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.nlark.com/p-locate/download/p-locate-3.0.0.tgz#322d69a05c0264b25997d9f40cd8a891ab0064a4"
-  integrity sha1-Mi1poFwCZLJZl9n0DNiokasAZKQ=
-  dependencies:
-    p-limit "^2.0.0"
 
 p-locate@^4.1.0:
   version "4.1.0"
@@ -6231,27 +6039,6 @@ ssri@^8.0.0, ssri@^8.0.1:
   dependencies:
     minipass "^3.1.1"
 
-standard-version@^9.3.2:
-  version "9.3.2"
-  resolved "https://registry.npmmirror.com/standard-version/download/standard-version-9.3.2.tgz#28db8c1be66fd2d736f28f7c5de7619e64cd6dab"
-  integrity sha1-KNuMG+Zv0tc28o98XedhnmTNbas=
-  dependencies:
-    chalk "^2.4.2"
-    conventional-changelog "3.1.24"
-    conventional-changelog-config-spec "2.1.0"
-    conventional-changelog-conventionalcommits "4.6.1"
-    conventional-recommended-bump "6.1.0"
-    detect-indent "^6.0.0"
-    detect-newline "^3.1.0"
-    dotgitignore "^2.1.0"
-    figures "^3.1.0"
-    find-up "^5.0.0"
-    fs-access "^1.0.1"
-    git-semver-tags "^4.0.0"
-    semver "^7.1.1"
-    stringify-package "^1.0.1"
-    yargs "^16.0.0"
-
 strict-uri-encode@^1.0.0:
   version "1.1.0"
   resolved "https://registry.npm.taobao.org/strict-uri-encode/download/strict-uri-encode-1.1.0.tgz#279b225df1d582b1f54e65addd4352e18faa0713"
@@ -6331,11 +6118,6 @@ stringify-object@3.3.0:
     get-own-enumerable-property-symbols "^3.0.0"
     is-obj "^1.0.1"
     is-regexp "^1.0.0"
-
-stringify-package@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npm.taobao.org/stringify-package/download/stringify-package-1.0.1.tgz#e5aa3643e7f74d0f28628b72f3dad5cecfc3ba85"
-  integrity sha1-5ao2Q+f3TQ8oYoty89rVzs/DuoU=
 
 strip-ansi@^3.0.0, strip-ansi@^3.0.1:
   version "3.0.1"
@@ -7053,7 +6835,7 @@ yargs-parser@^20.2.2, yargs-parser@^20.2.3:
   resolved "https://registry.nlark.com/yargs-parser/download/yargs-parser-20.2.9.tgz#2eb7dc3b0289718fc295f362753845c41a0c94ee"
   integrity sha1-LrfcOwKJcY/ClfNidThFxBoMlO4=
 
-yargs@^16.0.0, yargs@^16.2.0:
+yargs@^16.2.0:
   version "16.2.0"
   resolved "https://registry.npmmirror.com/yargs/download/yargs-16.2.0.tgz#1c82bf0f6b6a66eafce7ef30e376f49a12477f66"
   integrity sha1-HIK/D2tqZur85+8w43b0mhJHf2Y=
