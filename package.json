@@ -29,8 +29,8 @@
     "build": "node build.js"
   },
   "lint-staged": {
-    "*.{js,ts}": "eslint --cache --fix",
-    "*.{js,ts,md}": "prettier --write"
+    "*.{js,ts}": ["standard --fix","eslint --cache --fix"],
+    "*.{js,ts,md}": ["standard --fix","prettier --write"]
   },
   "dependencies": {
     "typescript": "^4.4.4"
