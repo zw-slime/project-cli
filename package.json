@@ -25,7 +25,8 @@
   },
   "scripts": {
     "commit": "git cz",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "build": "node build.js"
   },
   "lint-staged": {
     "*.{js,ts}": "eslint --cache --fix",

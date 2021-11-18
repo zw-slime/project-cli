@@ -3,14 +3,14 @@ import envinfo from 'envinfo';
 import https from 'https';
 import semver from 'semver/preload';
 import execa from 'execa';
-
-import packageJson from '../../package.json';
+import { configService } from '../service';
 
 export const checkEnv = async (info: boolean, useYarn: boolean, verbose: boolean) => {
+  const { name, version } = configService.config.packageJson;
   if (info) {
     // envinfo 提供浏览器版本，Node.js版本，操作系统，编程语言等相关信息
     console.log(chalk.bold('\nEnvironment Info:'));
-    console.log(`\n  current version of ${packageJson.name}: ${packageJson.version}`);
+    console.log(`\n  current version of ${name}: ${version}`);
     console.log(`  running from ${__dirname}`);
     const envinfoData = await envinfo.run(
       {
@@ -28,7 +28,7 @@ export const checkEnv = async (info: boolean, useYarn: boolean, verbose: boolean
   // 检测CLI版本
   const latest = await checkForLatestVersion().catch(async () => {
     try {
-      const result = await execa.commandSync(`npm view ${packageJson.name} version`);
+      const result = await execa.commandSync(`npm view ${name} version`);
       return result.stdout.toString().trim();
     } catch (e) {
       return null;
@@ -37,20 +37,20 @@ export const checkEnv = async (info: boolean, useYarn: boolean, verbose: boolean
 
   if (verbose) {
     console.log('latest:', latest);
-    console.log('cureent version:', packageJson.version);
+    console.log('cureent version:', version);
   }
 
-  if (latest && semver.lt(packageJson.version, latest as string)) {
+  if (latest && semver.lt(version, latest as string)) {
     console.log();
     console.error(
       chalk.yellow(
-        `You are running  \`${packageJson.name}\` ${packageJson.version}, which is behind the latest release (${latest}).
+        `You are running  \`${name}\` ${version}, which is behind the latest release (${latest}).
             Please remove any global installs with one of the following commands：
-            - npm uninstall -g ${packageJson.name}
-            - yarn global remove ${packageJson.name}
+            - npm uninstall -g ${name}
+            - yarn global remove ${name}
             And install again with one of the following commands：
-            - npm install -g ${packageJson.name}
-            - yarn global add ${packageJson.name}
+            - npm install -g ${name}
+            - yarn global add ${name}
             `,
       ),
     );
@@ -101,7 +101,7 @@ export const checkEnv = async (info: boolean, useYarn: boolean, verbose: boolean
 function checkForLatestVersion() {
   return new Promise((resolve, reject) => {
     https
-      .get(`https://registry.npmjs.org/-/package/${packageJson.name}/dist-tags`, (res) => {
+      .get(`https://registry.npmjs.org/-/package/${name}/dist-tags`, (res) => {
         if (res.statusCode === 200) {
           let body = '';
           res.on('data', (data) => (body += data));

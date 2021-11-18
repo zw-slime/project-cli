@@ -1,14 +1,16 @@
 import { Command } from 'commander';
 import chalk from 'chalk';
 
-import packageJson from '../../package.json';
 import fs from 'fs-extra';
-import { infoService } from '../service';
-import { templates } from '../config';
+import { configService, infoService } from '../service';
 
 export function arg() {
-  const program = new Command(packageJson.name)
-    .version(packageJson.version)
+  const {
+    packageJson: { name, version },
+    templates,
+  } = configService.config;
+  const program = new Command(name)
+    .version(version)
     .arguments('<project-directory>')
     .usage(`${chalk.green('<project-directory>')}[options]`)
     .option('--verbose', 'print additional logs')

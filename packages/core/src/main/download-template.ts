@@ -3,23 +3,25 @@ import fs from 'fs-extra';
 import chalk from 'chalk';
 const download = require('download-git-repo');
 
-import { templates } from '../config';
 import { deleteDirectory } from './delete-directory';
-import { optionService } from '../service';
+import { configService } from '../service';
 
 export const downloadTemplate = async () => {
-  const option = optionService.getOption();
-  const root = path.resolve(option.targetDirectory);
+  const {
+    templates,
+    option: { targetDirectory, template },
+  } = configService.config;
+  const root = path.resolve(targetDirectory);
   if (fs.existsSync(root)) {
     return Promise.reject(new Error(chalk.red(`${root} 文件夹已存在\n`)));
   } else {
     // 1. 创建文件夹
     fs.ensureDirSync(root);
 
-    const url = templates[option.template];
+    const url = templates[template];
     if (!url) {
       deleteDirectory();
-      return Promise.reject(new Error(chalk.red(`template ${option.template} is not exit.`)));
+      return Promise.reject(new Error(chalk.red(`template ${template} is not exit.`)));
     }
 
     // 2. 从git下载模版
@@ -51,9 +53,9 @@ export const downloadFromGit = (url: string, target: string) => {
 };
 
 export const changeProjectName = () => {
-  const option = optionService.getOption();
+  const { targetDirectory } = configService.config.option;
   return new Promise((resolve, reject) => {
-    const root = path.resolve(option.targetDirectory, 'package.json');
+    const root = path.resolve(targetDirectory, 'package.json');
     if (!fs.existsSync(root)) {
       deleteDirectory();
       reject(`${chalk.red(root)}文件不存在`);
@@ -61,7 +63,7 @@ export const changeProjectName = () => {
 
     try {
       const packageObj = fs.readJSONSync(root);
-      packageObj.name = option.targetDirectory;
+      packageObj.name = targetDirectory;
       const content = JSON.stringify(packageObj, null, 2);
       fs.writeFileSync(root, content);
     } catch (e) {
