@@ -28,7 +28,9 @@
   "scripts": {
     "commit": "git cz",
     "prepare": "husky install",
-    "build": "node build.js"
+    "build": "node build.js",
+    "prepublish": "lerna version --amend && yarn build",
+    "publish": "lerna publish from-git"
   },
   "lint-staged": {
     "*.{js,ts}": [
