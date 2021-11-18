@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.4](https://github.com/zw-slime/create-project-cli/compare/@zhangwei-smile/create-project@1.11.2...@zhangwei-smile/create-project@1.11.4) (2021-11-18)
+
+**Note:** Version bump only for package @zhangwei-smile/create-project
+
+## [1.11.3](https://github.com/zw-slime/create-project-cli/compare/@zhangwei-smile/create-project@1.11.2...@zhangwei-smile/create-project@1.11.3) (2021-11-18)
+
+**Note:** Version bump only for package @zhangwei-smile/create-project
+
 ## [1.11.2](https://github.com/zw-slime/create-project-cli/compare/@zhangwei-smile/create-project@1.11.1...@zhangwei-smile/create-project@1.11.2) (2021-11-18)
 
 **Note:** Version bump only for package @zhangwei-smile/create-project
