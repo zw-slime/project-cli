@@ -1,6 +1,6 @@
 {
   "name": "@zhangwei-smile/create-project-core",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "this is a core of the node js CLI",
   "keywords": [
     "core",
@@ -29,6 +29,9 @@
   "types": "build/index.d.ts",
   "bugs": {
     "url": "https://github.com/zw-slime/project-cli/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
     "arg": "^5.0.1",
