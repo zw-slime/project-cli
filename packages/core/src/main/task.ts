@@ -3,15 +3,15 @@ import Listr from 'listr';
 import { downloadTemplate } from './download-template';
 import { initGit } from './git';
 import { postInstall } from './postInstall';
-import { optionService } from '../service';
+import { configService } from '../service';
 
 export const task = async () => {
-  const option = optionService.getOption();
+  const { template, runInstall } = configService.config.option;
   const tasks = new Listr([
     {
       title: 'Download Template',
       task: () => downloadTemplate(),
-      enabled: () => !!option.template,
+      enabled: () => !!template,
     },
     {
       title: 'Init Git',
@@ -20,7 +20,7 @@ export const task = async () => {
     {
       title: 'Install DevDependence',
       task: () => postInstall(),
-      enabled: () => option.runInstall,
+      enabled: () => runInstall,
     },
   ]);
   await tasks.run();

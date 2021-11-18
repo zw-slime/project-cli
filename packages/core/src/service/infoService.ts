@@ -1,19 +1,15 @@
-import packageJson from '../../package.json';
 import chalk from 'chalk';
+import { configService } from './configService';
 
 class InfoService {
   start() {
-    console.log(
-      `%s You are using ${packageJson.name}@${packageJson.version} now...`,
-      chalk.yellowBright.bold('START'),
-    );
+    const { name, version } = configService.config.packageJson;
+    console.log(`%s You are using ${name}@${version} now...`, chalk.yellowBright.bold('START'));
   }
 
   exit() {
-    console.log(
-      `%s ${packageJson.name}@${packageJson.version} is exiting...`,
-      chalk.blueBright.bold('EXIT'),
-    );
+    const { name, version } = configService.config.packageJson;
+    console.log(`%s ${name}@${version} is exiting...`, chalk.blueBright.bold('EXIT'));
   }
 
   error(message: string) {

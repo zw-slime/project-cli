@@ -1,7 +1,21 @@
-import { checkEnv, arg, task, questions } from './main';
-import { infoService } from './service';
+import {
+  arg,
+  checkEnv,
+  questions,
+  task,
+  infoService,
+  configService,
+} from '@zhangwei-smile/create-project-core';
+
+import packageJson from '../package.json';
+import { templates } from './config';
 
 async function init() {
+  configService.config = {
+    ...configService.config,
+    packageJson: { name: packageJson.name, version: packageJson.version },
+    templates: templates,
+  };
   infoService.start();
   const args = arg();
   await checkEnv(

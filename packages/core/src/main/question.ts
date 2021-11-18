@@ -1,20 +1,19 @@
 import inquirer from 'inquirer';
 import { Command } from 'commander';
-import chalk from 'chalk';
 
-import { defaultTemplate, templates } from '../config';
-import { infoService, optionService } from '../service';
+import { configService, infoService } from '../service';
 
 export async function questions(args: Command): Promise<void> {
   const questions = [];
   const template = args.getOptionValue('template');
+  const templates = configService.config.templates;
   if (!template) {
     questions.push({
       type: 'list',
       name: 'template',
       message: 'Please choose which project template to use ?',
       choices: Object.keys(templates),
-      default: defaultTemplate,
+      default: Object.keys(templates)[0],
     });
   } else {
     infoService.question('Please choose which project template to use', template);
@@ -47,14 +46,17 @@ export async function questions(args: Command): Promise<void> {
 
   const answers = await inquirer.prompt(questions);
 
-  optionService.setOption({
-    info: args.getOptionValue('info'),
-    template: template || answers.template,
-    targetDirectory: args.args[0],
-    runInstall: install || answers.runInstall,
-    templateDirectory: template,
-    useYarn: useYarn || answers.useYarn,
-    verbose: args.getOptionValue('verbose'),
-  });
+  configService.config = {
+    ...configService.config,
+    option: {
+      info: args.getOptionValue('info'),
+      template: template || answers.template,
+      targetDirectory: args.args[0],
+      runInstall: install || answers.runInstall,
+      templateDirectory: template,
+      useYarn: useYarn || answers.useYarn,
+      verbose: args.getOptionValue('verbose'),
+    },
+  };
   return;
 }
