@@ -23,7 +23,9 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "rm -rf build && node build.js"
+    "build": "rm -rf build && node build.js",
+    "prepublish": "lerna version --amend && yarn build",
+    "publish": "lerna publish from-git"
   },
   "main": "build/index.js",
   "types": "build/index.d.ts",

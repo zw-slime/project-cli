@@ -2,13 +2,16 @@ import chalk from 'chalk';
 import { configService } from './configService';
 
 class InfoService {
-  start() {
-    const { name, version } = configService.config.packageJson;
+  start(name?: string, version?: string) {
+    const { name: name1, version: version1 } = configService.config.packageJson;
+    name = name ? name : name1;
+    version ? version : version1;
     console.log(`%s You are using ${name}@${version} now...`, chalk.yellowBright.bold('START'));
   }
 
-  exit() {
-    const { name, version } = configService.config.packageJson;
+  exit(name?: string, version?: string) {
+    const { name: name1, version: version1 } = configService.config.packageJson;
+    name = name ? name : name1;
     console.log(`%s ${name}@${version} is exiting...`, chalk.blueBright.bold('EXIT'));
   }
 

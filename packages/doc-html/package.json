@@ -1,12 +1,13 @@
 {
-  "name": "@zhangwei-smile/create-project",
-  "version": "1.11.4",
-  "description": "A CLI to bootstrap my new projects",
+  "name": "@zhangwei-smile/doc-html",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "A CLI to translate doc to html",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
   "bin": {
-    "zw/create-project": "./bin/create-project.js",
-    "create-project": "./bin/create-project.js"
+    "zw/doc-html": "./bin/index.js",
+    "doc-html": "./bin/index.js"
   },
   "publishConfig": {
     "access": "public"
@@ -23,9 +24,9 @@
     "create-project"
   ],
   "author": "zhangwei",
-  "license": "MIT",
   "dependencies": {
     "@zhangwei-smile/create-project-core": "^0.2.0",
+    "mammoth": "^1.4.21",
     "ts-node": "^10.4.0"
   },
   "files": [
@@ -44,6 +45,5 @@
   "lint-staged": {
     "src*": "prettier --write --ignore-unknown",
     "src/**/*.{ts,js}": "eslint --fix"
-  },
-  "gitHead": "23af054e72e54149f3733adf20da954da9b522e6"
+  }
 }
